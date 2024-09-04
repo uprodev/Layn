@@ -1,0 +1,124 @@
+.footer {
+  color: $white;
+  padding: 30px 40px 29px;
+  font-size: 13px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    top: 0;
+    height: 1px;
+    background-color: rgba($white, 0.5);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0;
+    width: 20%;
+
+    &:last-child {
+      text-align: right;
+      padding: 0 18px 0 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      & + li {
+        &:before {
+          content: url("../images/icons/dot.svg");
+          margin: 0 49px;
+          display: block;
+          line-height: 0;
+        }
+      }
+    }
+  }
+
+  &--landing {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 30px 58px 29px 40px;
+
+    p {
+      width: auto;
+    }
+
+    ul {
+      li {
+        & + li {
+          &:before {
+            margin: 0 50px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 20px 16px;
+
+    &:before {
+      left: 20px;
+      right: 20px;
+    }
+
+    p {
+      width: auto;
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+    ul {
+      li {
+        & + li {
+          &:before {
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+
+    &--landing {
+      padding: 20px 16px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+    p {
+      &:last-child {
+        text-align: center;
+      }
+    }
+    ul {
+      margin: 20px 0;
+      justify-content: center;
+    }
+
+    &--landing {
+      ul {
+        margin: 0;
+      }
+    }
+  }
+}

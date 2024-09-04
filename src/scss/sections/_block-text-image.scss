@@ -1,0 +1,38 @@
+.block-text-image {
+  padding: 24px 0 33.1vh;
+
+  .subtitle {
+    margin: 0 0 60px;
+  }
+
+  .text {
+    max-width: 506px;
+
+    h3 {
+      margin: 0 0 42px;
+    }
+
+    h4 {
+      margin: 0 0 13px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 30px;
+    }
+  }
+
+  .image {
+    img {
+      @include img-fit;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 0 200px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0 0 120px;
+  }
+}

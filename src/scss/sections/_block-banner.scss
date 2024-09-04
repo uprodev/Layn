@@ -1,0 +1,46 @@
+.block-banner {
+  height: 100vh;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 73px;
+    background: url(../images/lines.svg);
+  }
+
+  .image {
+    @include abs;
+
+    img {
+      @include img-fit;
+      opacity: 0.15;
+    }
+  }
+
+  .text {
+    padding: 19.7vh 40px 0;
+    position: relative;
+    z-index: 2;
+    color: $white;
+
+    h1 {
+      margin: 0 0 30px;
+    }
+
+    p {
+      margin: 0;
+      max-width: 359px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .text {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

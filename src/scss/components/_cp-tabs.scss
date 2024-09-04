@@ -1,0 +1,49 @@
+.cp-tabs {
+  .nav-tabs {
+    border: none;
+    font-family: $font-family-headlines;
+    font-size: 35px;
+    margin: 0 0 62px;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+
+      & + li {
+        &:before {
+          content: url("../images/icons/dot1.svg");
+          margin: 0 46px 5px;
+          display: block;
+          line-height: 0;
+        }
+      }
+
+      .nav-link {
+        padding: 0;
+        border: none;
+        color: $gray;
+        text-decoration: none;
+
+        &.active {
+          color: $dark;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .nav-tabs {
+      font-size: 24px;
+      margin: 0 0 40px;
+
+      .nav-item {
+        & + li {
+          &:before {
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}

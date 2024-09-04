@@ -1,0 +1,15 @@
+.block-intro {
+  padding: 30vh 0;
+
+  .subtitle {
+    margin: -21px 15px 0 0;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 200px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 120px 0;
+  }
+}

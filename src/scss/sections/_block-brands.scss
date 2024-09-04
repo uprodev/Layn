@@ -1,0 +1,15 @@
+.block-brands {
+  padding: 30vh 0 25.3vh;
+
+  img {
+    @include img-fit;
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding: 20vh 0;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 200px 0 0;
+  }
+}

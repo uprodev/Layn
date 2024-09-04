@@ -1,0 +1,70 @@
+input,
+select,
+textarea,
+button {
+  font-family: $font-family-base;
+}
+
+html {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+  font-size: $font-size-base;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-family: $font-family-headlines;
+  font-size: clamp($h1-font-size-sm, 2.78vw, $h1-font-size);
+  line-height: normal;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-family: $font-family-headlines;
+  font-size: clamp($h2-font-size-sm, 1.85vw, $h2-font-size);
+  line-height: normal;
+  margin: 0;
+  letter-spacing: 0;
+
+  @include media-breakpoint-up(lg) {
+  }
+}
+
+h3 {
+  font-family: $font-family-headlines;
+  font-size: clamp($h3-font-size-sm, 1.62vw, $h3-font-size);
+  line-height: normal;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  line-height: normal;
+  margin: 0;
+  font-weight: 500;
+
+  @include media-breakpoint-up(lg) {
+  }
+}
+
+.subtitle {
+  display: inline-block;
+  border-bottom: 1px solid $gray;
+  color: $gray;
+  font-size: 13px;
+  min-width: 280px;
+  padding: 7px 0;
+}
+
+.text-white {
+  .subtitle {
+    border-color: $white;
+    color: $white;
+  }
+}

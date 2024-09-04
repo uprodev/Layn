@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Brockmann Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Brockmann Medium"), url("../fonts/brockmann-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("../fonts/roobert-regular.woff2") format("woff2"), url("../fonts/roobert-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("../fonts/roobert-medium.woff2") format("woff2"), url("../fonts/roobert-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

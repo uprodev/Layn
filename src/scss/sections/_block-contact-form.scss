@@ -1,0 +1,44 @@
+.block-contact-form {
+  padding: 18.7vh 0 19.6vh;
+
+  .subtitle {
+    margin: 0 0 38px;
+  }
+
+  .text {
+    h3 {
+      max-width: 14.7em;
+      margin: 0 0 45px;
+    }
+
+    p {
+      max-width: 17em;
+    }
+  }
+
+  .form {
+    max-width: 579px;
+
+    p {
+      margin: 31px 0 33px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 200px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 120px 0;
+  }
+}
+
+.bg-dark {
+  .block-contact-form {
+    .form {
+      .form-control {
+        @include placeholder(#828282, 1);
+      }
+    }
+  }
+}
