@@ -15,7 +15,8 @@
   .image {
     @include abs;
 
-    img {
+    img,
+    video {
       @include img-fit;
       opacity: 0.15;
     }

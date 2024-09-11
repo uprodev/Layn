@@ -14,6 +14,10 @@ body {
   font-size: $font-size-base;
   line-height: 1.4;
   letter-spacing: 0.05em;
+
+  @include media-breakpoint-down(md) {
+    font-size: 0.875rem;
+  }
 }
 
 h1 {

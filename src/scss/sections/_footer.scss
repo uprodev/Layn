@@ -58,6 +58,10 @@
     width: 100%;
     padding: 30px 58px 29px 40px;
 
+    &:before {
+      display: none;
+    }
+
     p {
       width: auto;
     }
@@ -74,11 +78,11 @@
   }
 
   @include media-breakpoint-down(lg) {
-    padding: 20px 16px;
+    padding: 31px 23px;
 
     &:before {
-      left: 20px;
-      right: 20px;
+      left: 24px;
+      right: 24px;
     }
 
     p {
@@ -99,12 +103,14 @@
     }
 
     &--landing {
-      padding: 20px 16px;
+      padding: 31px 23px;
     }
   }
 
   @include media-breakpoint-down(md) {
     text-align: center;
+    font-size: 12px;
+
     p {
       &:last-child {
         text-align: center;
@@ -113,6 +119,14 @@
     ul {
       margin: 20px 0;
       justify-content: center;
+
+      li {
+        & + li {
+          &:before {
+            margin: 0 12px;
+          }
+        }
+      }
     }
 
     &--landing {

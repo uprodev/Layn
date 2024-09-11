@@ -50,7 +50,7 @@
 
         h1 {
           font-family: $font-family-headlines;
-          font-size: 4.861vw;
+          font-size: clamp(2.125rem, 4.861vw, 5.25rem);
           line-height: normal;
           margin: 0;
           letter-spacing: 0;
@@ -103,6 +103,60 @@
           &:before,
           &:after {
             background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+
+    .column {
+      width: 100%;
+      height: 50%;
+
+      a {
+        .image {
+          &:after {
+            opacity: 0;
+          }
+        }
+
+        .text {
+          padding: 0 16px;
+          justify-content: center;
+
+          p {
+            font-size: 14px;
+            margin: 4px 0 23px;
+            opacity: 1;
+          }
+
+          .arrow {
+            width: 19px;
+            opacity: 1;
+
+            svg {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+
+      &--left {
+        a {
+          .text {
+            padding-top: 50px;
+          }
+        }
+      }
+      &--right {
+        a {
+          .text {
+            padding-bottom: 50px;
           }
         }
       }
