@@ -135,6 +135,22 @@
     }
   }
 
+  .swiper-overlay-left,
+  .swiper-overlay-right {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 9;
+    cursor: url(../images/icons/slider-left.png), auto;
+  }
+  .swiper-overlay-right {
+    left: auto;
+    right: 0;
+    cursor: url(../images/icons/slider-right.png), auto;
+  }
+
   @include media-breakpoint-down(xl) {
     .swiper {
       .slide-text {
