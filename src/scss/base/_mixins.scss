@@ -83,3 +83,24 @@
     $initial: $initial + $step;
   }
 }
+
+@mixin animatedLink($color) {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: $color;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}

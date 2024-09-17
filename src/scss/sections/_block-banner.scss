@@ -38,6 +38,19 @@
     }
   }
 
+  .btn-scroll-wrap {
+    position: absolute;
+    right: 35px;
+    bottom: 113px;
+
+    .btn-scroll {
+      appearance: none;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+  }
+
   @include media-breakpoint-down(lg) {
     .text {
       padding-left: 20px;

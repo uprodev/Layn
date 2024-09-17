@@ -3,7 +3,8 @@
     border: none;
     font-family: $font-family-headlines;
     font-size: 35px;
-    margin: 0 0 62px;
+    margin: 0 0 -44px;
+    position: relative;
 
     .nav-item {
       display: flex;
@@ -32,7 +33,7 @@
     }
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     .nav-tabs {
       font-size: 24px;
       margin: 0 0 40px;

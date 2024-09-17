@@ -49,10 +49,13 @@
         }
 
         a {
+          display: inline-block;
+          padding: 2px 0;
           text-decoration: none;
           opacity: 0.4;
           transition: all 0.5s;
           color: $white;
+          @include animatedLink($white);
 
           &:hover {
             opacity: 1;

@@ -169,4 +169,8 @@ jQuery(document).ready(function ($) {
   if ($("#preloader").length) {
     preloader();
   }
+
+  $(".btn-scroll").on("click", function () {
+    lenis.scrollTo(window.innerHeight, { duration: 1 });
+  });
 });
