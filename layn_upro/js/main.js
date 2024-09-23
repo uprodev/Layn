@@ -62,6 +62,13 @@ jQuery(document).ready(function ($) {
         },
       },
     });
+
+    $(".swiper-overlay-right").on("click", function () {
+      swiper.slideNext();
+    });
+    $(".swiper-overlay-left").on("click", function () {
+      swiper.slidePrev();
+    });
   }
 
   function preloader() {

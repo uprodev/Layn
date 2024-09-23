@@ -14,6 +14,8 @@ if($args['row']):
 		</div>
 
 		<div class="swiper">
+			<div class="swiper-overlay-left"></div>
+			<div class="swiper-overlay-right"></div>
 			<div class="swiper-wrapper">
 
 				<?php foreach ($items as $item): ?>
