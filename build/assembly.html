@@ -11,13 +11,12 @@
     <!-- 180×180 -->
     <link rel="icon" href="favicons/favicon.ico" />
     <style>
-    .global-wrapper.page-landing{opacity:0}.preloader{position:fixed;left:0;top:0;width:100vw;height:100vh;background-color:#111;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transform-origin:center}.preloader .preloader-logo{margin:0 0 20px}.preloader .preloader-visual{width:304px;height:28px;background:url(../images/preloader1.svg) repeat-x;position:relative;margin:0 0 20px}.preloader .preloader-visual .inner{position:absolute;left:0;top:0;width:0;height:28px;background:url(../images/preloader2.svg) repeat-x}.preloader .preloader-percent-digits{display:flex;font-family:"Brockmann Medium",sans-serif;font-size:26px;color:#fff;overflow:hidden;line-height:1.2;height:1.2em}.preloader .preloader-percent-digits .preloader-percent-digit{position:relative}
+    .global-wrapper.page-landing{opacity:0}.preloader{position:fixed;left:0;top:0;width:100vw;height:100vh;background-color:#111;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transform-origin:center}.preloader .preloader-logo{margin:0 0 20px;opacity:0}
     </style>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
 <header class="header">
-  <div class="header-mark"><img src="images/assembly.svg" alt="" /></div>
   <div class="header-logo">
     <a href="#">
       <img src="./images/logo.svg" alt="" />
@@ -26,7 +25,7 @@
   <nav class="header-navigation">
     <ul>
       <li><a href="#">Creative</a></li>
-      <li class="active"><a href="#">Assembly</a></li>
+      <li class="current-menu-item"><a href="#">Assembly</a></li>
     </ul>
   </nav>
 </header>
@@ -48,7 +47,13 @@
             </button>
           </div>
         </section>
-        <section class="block-intro bg-white">
+        <section class="block-intro block-intro--has-video bg-primary text-white">
+          <div class="video-wrapper bg-white">
+            <div class="video">
+              <video src="images/test.mp4" poster="images/img04.jpg"></video>
+              <a href="#" class="btn-play"><img src="images/icon-play.png" alt="" /></a>
+            </div>
+          </div>
           <div class="container-fluid">
             <div class="subtitle float-start">Who we are</div>
             <h2>Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</h2>
@@ -81,7 +86,19 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <div class="image"><img src="images/img03.jpg" alt="" /></div>
+                      <div class="image-slider swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="image"><img src="images/img03.jpg" alt="" /></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="image"><img src="images/img03.jpg" alt="" /></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="image"><img src="images/img03.jpg" alt="" /></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -97,7 +114,19 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <div class="image"><img src="images/img01.png" alt="" /></div>
+                      <div class="image-slider swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="image"><img src="images/img03.jpg" alt="" /></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="image"><img src="images/img03.jpg" alt="" /></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="image"><img src="images/img03.jpg" alt="" /></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -105,7 +134,7 @@
             </div>
           </div>
         </section>
-        <section class="block-contact-form text-white">
+        <section id="form" class="block-contact-form text-white">
           <div class="container-fluid">
             <div class="subtitle">Register interest</div>
             <div class="row">
@@ -154,7 +183,7 @@
       <div class="d-md-flex align-items-center justify-content-between">
         <p>&copy; Layn Creative</p>
         <ul>
-          <li><a href="#">X/Twitter </a></li>
+          <li><a href="#">X/Twitter</a></li>
           <li><a href="#">LinkedIn</a></li>
           <li><a href="#">Instagram</a></li>
         </ul>

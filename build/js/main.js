@@ -71,106 +71,58 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  function preloader() {
-    var outputCurrent = [0, 0, 0];
-    var outputNext = [0, 0, 0];
-
-    function format_number(x) {
-      gsap.to("#preloaderVisualInner", {
-        duration: 0.1,
-        ease: "none",
-        width: x + "%",
+  if ($(".image-slider").length) {
+    document.querySelectorAll(".image-slider").forEach((slider) => {
+      const swiper = new Swiper(slider, {
+        loop: true,
+        direction: "vertical",
+        autoHeight: true,
+        spaceBetween: 0,
+        speed: 1000,
+        autoplay: {
+          delay: 2000,
+        },
       });
-      var outputCurrent1 = [],
-        outputNext1 = [],
-        sNumber = x,
-        sNumberPrev;
-      if (sNumber === 0) {
-        sNumberPrev = 0;
-      } else {
-        sNumberPrev = x - 1;
-      }
-      sNumber = x.toString();
-      sNumberPrev = sNumberPrev.toString();
-
-      if (sNumber.length === 1) {
-        sNumber = "00" + sNumber;
-      }
-      if (sNumber.length === 2) {
-        sNumber = "0" + sNumber;
-      }
-      if (sNumberPrev.length === 1) {
-        sNumberPrev = "00" + sNumberPrev;
-      }
-      if (sNumberPrev.length === 2) {
-        sNumberPrev = "0" + sNumberPrev;
-      }
-      for (var i = 0, len = sNumber.length; i < len; i += 1) {
-        outputNext1.push(+sNumber.charAt(i));
-        outputCurrent1.push(+sNumberPrev.charAt(i));
-      }
-
-      $(".preloader-percent-digit").each(function (i) {
-        var $digit = $(this);
-        if (outputNext1[i] !== outputNext[i]) {
-          $digit.find(".preloader-current").text(+sNumber.charAt(i));
-        }
-        if (outputCurrent1[i] !== outputCurrent[i]) {
-          $digit.find(".preloader-prev").text(+sNumberPrev.charAt(i));
-          gsap.to($digit, {
-            duration: 0.1,
-            ease: "none",
-            y: "-100%",
-            onComplete: function () {
-              gsap.set($digit, {
-                y: "0%",
-              });
-            },
-          });
-        }
-      });
-
-      outputCurrent = outputCurrent1;
-      outputNext = outputNext1;
-    }
-
-    var counter = document.getElementById("counter"),
-      value = {
-        val: 100,
-      };
-
-    gsap.from(value, {
-      duration: 2,
-      delay: 0.5,
-      ease: "none",
-      val: 0,
-      roundProps: "val",
-      onUpdate: function () {
-        format_number(value.val);
-      },
-      onComplete: function () {
-        $(".preloader-percent-digit").each(function (i) {
-          var $digit = $(this);
-          gsap.to($digit, {
-            duration: 0.1,
-            ease: "none",
-            y: "-100%",
-            onComplete: function () {
-              $(".global-wrapper").css("opacity", 1);
-              gsap.to("#preloader", {
-                duration: 0.5,
-                ease: "quad.in",
-                scale: 5,
-                opacity: 0.5,
-                onComplete: function () {
-                  $("#preloader").hide();
-                },
-              });
-            },
-          });
-        });
-      },
     });
+
+    $(".swiper-overlay-right").on("click", function () {
+      swiper.slideNext();
+    });
+    $(".swiper-overlay-left").on("click", function () {
+      swiper.slidePrev();
+    });
+  }
+
+  function preloader() {
+    const tl = gsap.timeline({
+      delay: 0.5,
+    });
+
+    tl.set(".global-wrapper.page-landing", {
+      opacity: 1,
+    })
+      .to(".preloader-logo", {
+        opacity: 1,
+        ease: "none",
+        duration: 1.5,
+      })
+      .to(".preloader-logo", {
+        opacity: 0,
+        ease: "none",
+        duration: 1.5,
+      })
+      .to(
+        ".preloader",
+        {
+          opacity: 0,
+          ease: "none",
+          duration: 1,
+          onComplete: function () {
+            $(".preloader").hide();
+          },
+        },
+        "-=0.2"
+      );
   }
 
   if ($("#preloader").length) {
@@ -180,4 +132,29 @@ jQuery(document).ready(function ($) {
   $(".btn-scroll").on("click", function () {
     lenis.scrollTo(window.innerHeight, { duration: 1 });
   });
+
+  $(".btn-play").on("click", function (e) {
+    e.preventDefault();
+    $(this).hide();
+    var video = $(this).prev("video");
+    video.attr("controls", true);
+    video.get(0).play();
+  });
+
+  document.querySelectorAll(".subtitle").forEach((subtitle) => {
+    gsap.to(subtitle, {
+      scrollTrigger: {
+        trigger: subtitle,
+        start: "top 70%",
+      },
+      "--scale": 1,
+    });
+  });
+
+  if (window.location.hash) {
+    var dest = document.querySelector(window.location.hash);
+    if (dest) {
+      lenis.scrollTo(dest);
+    }
+  }
 });

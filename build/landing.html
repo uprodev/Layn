@@ -11,7 +11,7 @@
     <!-- 180×180 -->
     <link rel="icon" href="favicons/favicon.ico" />
     <style>
-    .global-wrapper.page-landing{opacity:0}.preloader{position:fixed;left:0;top:0;width:100vw;height:100vh;background-color:#111;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transform-origin:center}.preloader .preloader-logo{margin:0 0 20px}.preloader .preloader-visual{width:304px;height:28px;background:url(../images/preloader1.svg) repeat-x;position:relative;margin:0 0 20px}.preloader .preloader-visual .inner{position:absolute;left:0;top:0;width:0;height:28px;background:url(../images/preloader2.svg) repeat-x}.preloader .preloader-percent-digits{display:flex;font-family:"Brockmann Medium",sans-serif;font-size:26px;color:#fff;overflow:hidden;line-height:1.2;height:1.2em}.preloader .preloader-percent-digits .preloader-percent-digit{position:relative}
+    .global-wrapper.page-landing{opacity:0}.preloader{position:fixed;left:0;top:0;width:100vw;height:100vh;background-color:#111;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transform-origin:center}.preloader .preloader-logo{margin:0 0 20px;opacity:0}
     </style>
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -27,73 +27,49 @@
   <div class="preloader-logo">
     <img src="./images/logo.svg" alt="" />
   </div>
-  <div class="preloader-visual">
-    <div id="preloaderVisualInner" class="inner"></div>
-  </div>
-  <div id="preloaderPercentDigits" class="preloader-percent-digits">
-    <div class="preloader-percent-digit">
-      <div class="preloader-percent-digit-num preloader-prev">0</div>
-      <div class="preloader-percent-digit-num preloader-current">0</div>
-    </div>
-    <div class="preloader-percent-digit">
-      <div class="preloader-percent-digit-num preloader-prev">0</div>
-      <div class="preloader-percent-digit-num preloader-current">0</div>
-    </div>
-    <div class="preloader-percent-digit">
-      <div class="preloader-percent-digit-num preloader-prev">0</div>
-      <div class="preloader-percent-digit-num preloader-current">0</div>
-    </div>
-  </div>
 </div>
 
 <div class="global-wrapper page-landing bg-dark">
     <main class="content">
         <section class="block-landing">
           <div class="column column--left">
-            <a href="creative.html">
-              <div class="image"><img src="images/img01.png" alt="" /></div>
-              <div class="text">
-                <h1>Creative</h1>
-                <p>Creating with creatives</p>
-                <div class="arrow">
-                  <svg width="64" height="55" viewBox="0 0 64 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.00354362 29.3877L51.3477 29.3912" stroke="white" stroke-width="0.77" stroke-miterlimit="10" />
-                    <path d="M0.00354362 27.4971L51.3477 27.5006" stroke="white" stroke-width="0.77" stroke-miterlimit="10" />
-                    <path d="M51.3477 25.611L1.66271e-05 25.6074" stroke="white" stroke-width="0.77" stroke-miterlimit="10" />
-                    <path d="M36.5333 54.9311L61.2357 30.1753L63.9043 27.5028L61.2357 24.8284L36.528 0.0673831" stroke="white" stroke-width="0.77" stroke-miterlimit="10" stroke-linecap="round" />
-                    <path d="M35.1966 53.5765L58.5463 30.1748L61.2148 27.5022L58.5463 24.8279L35.179 1.41016" stroke="white" stroke-width="0.77" stroke-miterlimit="10" stroke-linecap="round" />
-                    <path d="M33.8678 2.74121L58.5703 27.497L33.8625 52.258" stroke="white" stroke-width="0.77" stroke-miterlimit="10" stroke-linecap="round" />
-                  </svg>
-                </div>
-              </div>
-            </a>
+            <div class="image"><img src="images/img01.png" alt="" /></div>
+            <div class="text">
+              <h1>
+                <span>Creative</span>
+                <img src="images/creative-text.svg" alt="" />
+              </h1>
+              <div class="subheadline">Creating with creatives</div>
+              <p>Aenean vestibulum nec vitae tellus quis tortor. Ultrices tincidunt scelerisque at arcu gravida faucibus ac felis viverra. Mi volutpat proin eget aliquam ut tellus orci.</p>
+              <ul>
+                <li><a href="creative.html">See more</a></li>
+                <li><a href="creative.html#form">Contact us</a></li>
+              </ul>
+            </div>
           </div>
           <div class="column column--right">
-            <a href="assembly.html">
-              <div class="image"><img src="images/img02.jpg" alt="" /></div>
-              <div class="text">
-                <h1>Assembly</h1>
-                <p>Empowering freelancers</p>
-                <div class="arrow">
-                  <svg width="64" height="55" viewBox="0 0 64 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.00354362 29.3877L51.3477 29.3912" stroke="white" stroke-width="0.77" stroke-miterlimit="10" />
-                    <path d="M0.00354362 27.4971L51.3477 27.5006" stroke="white" stroke-width="0.77" stroke-miterlimit="10" />
-                    <path d="M51.3477 25.611L1.66271e-05 25.6074" stroke="white" stroke-width="0.77" stroke-miterlimit="10" />
-                    <path d="M36.5333 54.9311L61.2357 30.1753L63.9043 27.5028L61.2357 24.8284L36.528 0.0673831" stroke="white" stroke-width="0.77" stroke-miterlimit="10" stroke-linecap="round" />
-                    <path d="M35.1966 53.5765L58.5463 30.1748L61.2148 27.5022L58.5463 24.8279L35.179 1.41016" stroke="white" stroke-width="0.77" stroke-miterlimit="10" stroke-linecap="round" />
-                    <path d="M33.8678 2.74121L58.5703 27.497L33.8625 52.258" stroke="white" stroke-width="0.77" stroke-miterlimit="10" stroke-linecap="round" />
-                  </svg>
-                </div>
-              </div>
-            </a>
+            <div class="image"><img src="images/img02.jpg" alt="" /></div>
+            <div class="text">
+              <h1>
+                <span>Assembly</span>
+                <img src="images/assembly-text.svg" alt="" />
+              </h1>
+              <div class="subheadline">Empowering freelancers</div>
+              <p>Diam tristique turpis senectus eu in diam. Risus at turpis eu tellus placerat viverra arcu. Id eget convallis sed vel aliquam. Et mauris tellus sed arcu.</p>
+              <ul>
+                <li><a href="assembly.html">See more</a></li>
+                <li><a href="assembly.html#form">Contact us</a></li>
+              </ul>
+            </div>
           </div>
         </section>
     </main>
 
     <footer class="footer footer--landing">
-      <div class="d-flex align-items-center justify-content-between">
+      <div class="d-md-flex align-items-center justify-content-between">
         <p>&copy; LAYN 2020</p>
         <ul>
+          <li><a href="#">Terms &amp; Conditions</a></li>
           <li><a href="#">LinkedIn</a></li>
           <li><a href="#">Instagram</a></li>
         </ul>
